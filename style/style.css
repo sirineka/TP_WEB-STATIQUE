@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+@font-face {
+  font-family: "Foobar";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Foobar"), url("../fonts/Foobar\ Pro-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --primary: white;
+  --secondary: rgb(89, 6, 243);
+  --third: antiquewhite;
+  --fourth: rgb(135, 160, 159);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  background-color: var(--third);
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 15px;
+  line-height: 120%;
+  font-family: "Foobar";
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+section:not(:first-child) {
+  margin: 2em auto;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+.btn {
+  background-color: rgb(89, 6, 243);
+  border-radius: 25px;
+  padding: 1em 4em;
+}
+/**********************NAVBAR*********************/
+.navbar {
+  background: linear-gradient(rgb(114, 114, 241), rgb(172, 97, 241));
+  overflow: hidden;
+  position: relative;
+}
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  align-items: center;
+}
+.logo ul {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.circle-logo {
+  background-color: var(--primary);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.navbar-burger {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary);
+  position: relative;
+}
+.navbar-burger::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background: var(--primary);
+  position: absolute;
+  transform: translate(0, 10px);
+}
+.loading-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5em;
+  align-items: center;
+}
+.loading-text p {
+  margin-bottom: 3em;
+}
+.loading-image {
+  width: 50%;
+}
+loading-image img {
+  width: 90%;
+}
+.open i {
+  background-color: var(--secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: 50px;
+  bottom: -5%;
+  padding-top: 1em;
+  transform: translate(1450%);
+  bottom: -32%;
+}
+
+@media screen and (max-width: 768px) {
+  .loading-row {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr, 0.1fr, 0.5fr);
+    text-align: center;
+  }
+  .loading-text {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .btn {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .loading-image img {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 300px;
+    margin: 3em;
+  }
+}
+/*********************Features***************/
+
+.features {
+  position: relative;
+}
+
+.features-text h1,
+h4 {
+  color: black;
+}
+.features-text {
+  text-align: center;
+  padding: 5em;
+}
+.features-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  text-align: center;
+  background: linear-gradient(180deg, white, #bdabab);
+}
+
+@media screen and (max-width: 768px) {
+  .features-image {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.image-1 {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.empty {
+  background-color: var(--third);
+  height: 200px;
+}
+
+/***********Started**********/
+.started h1 {
+  color: black;
+}
+.started-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  background-color: var(--fourth);
+  padding: 3em;
+}
+.input-group input {
+  padding: 1em 3em;
+  border-radius: 5%;
+}
+.row h1 {
+  text-align: center;
+}
+/*****************************video******************/
+video {
+  width: 100%;
+}
+.video h1 {
+  color: black;
+  text-align: center;
+}
+/***************presentation*********************/
+.presentation {
+  display: flex;
+  gap: 3em;
+  background-color: var(--fourth);
+  padding: 4em;
+}
+.presentation h2 {
+  color: black;
+}
+/*************gallery***********/
+.gallery h3 {
+  color: black;
+  text-align: center;
+}
+.gallery-image-1 img {
+  width: 100%;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 2em;
+  grid-row-gap: 3em;
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+/********************banner**************/
+.banner {
+  background: linear-gradient(rgb(114, 114, 241), rgb(172, 97, 241));
+  overflow: hidden;
+  padding: 10em;
+}
+.banner p {
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    text-align: center;
+  }
+}
+/******************article*****************/
+.article h1,
+h3 {
+  color: black;
+  text-align: center;
+}
+.article-image-1 img{
+  width: 300px;
+  overflow: hidden;
+}
+
+.article-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 5em;
+}
+/***************location***************/
+.location {
+  background-image: url(../image/acf-google-map-field-interface.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 10em 0;
+  background-position: center;
+}
+.btn-1 {
+  background-color: white;
+  padding: 0.7em;
+}
+.location i {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+/*******************end***********************/
+.end-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+.end-text {
+  width: 40%;
+}
+.end-text-1 {
+  width: 25%;
+}
+.end-text .logo {
+  margin-bottom: 4em;
+}
+.end-text .logo .circle-logo {
+  background-color: purple;
+}
+@media screen and (max-width: 768px) {
+  .end-text-1,
+  .end-text {
+    width: 100%;
+    text-align: center;
+  }
+  .separator {
+    color: transparent;
+  }
+}
